@@ -1,0 +1,26 @@
+<div class="blog-list">
+  <h1>My Blogs</h1>
+  <div class="filter-section">
+    <input [(ngModel)]="searchTitle" placeholder="Search by title" />
+    <select [(ngModel)]="filterStatus">
+      <option value="">All Statuses</option>
+      <option value="published">Published</option>
+      <option value="draft">Draft</option>
+    </select>
+    <button (click)="getMyBlog()">Apply Filters</button>
+  </div>
+  <div *ngFor="let blog of blogArray" class="blog-item">
+    <h2>{{ blog.title }}</h2>
+    <p><strong>Author:</strong> {{ blog.author_username }}</p>
+    <p><strong>Published:</strong> {{ blog.created_at | slice:0:10}}</p>
+    <p><strong>Status:</strong> {{ blog.status }}</p>
+    <p class="excerpt">{{ blog.content }}</p>
+  </div>
+  <div class="pagination">
+    <button (click)="changePage(pageNumber - 1)" [disabled]="pageNumber <= 1">Previous</button>
+    <span>Page {{ pageNumber }} of {{ totalPages }}</span>
+    <button (click)="changePage(pageNumber + 1)" [disabled]="pageNumber >= totalPages">Next</button>
+  </div>
+
+  <button [routerLink]="['/user/blogreg']" class="add-blog-button"  style="margin-left: 106ex;margin-top: -2ex;">Add New Blog</button>
+</div>

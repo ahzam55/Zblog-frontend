@@ -1,0 +1,19 @@
+
+<form class="classform" method="post" style="margin-left: 102ex; margin-top: 30ex;">
+    <h2>Sign In</h2><br><br>
+    <div class="container">
+        <label for="username"><b>Username</b></label>
+        <input  [(ngModel)]="username" [ngModelOptions]="{standalone: true}" type="text" id="text" placeholder="Enter Username" name="username" required>
+
+        <label for="password"><b>Password</b></label>
+        <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" id="text" placeholder="Enter Password" name="password" required><br><br>
+
+        <button type="submit" style="background-color:rgb(131, 21, 221); color: white; padding: 10px 20px; border: none; border-radius: 5px; margin-left: 15ex;" (click)="saveRecords()">Sign In</button><br>
+
+        <!-- Option to create an account -->
+        <div style="margin-top: 10px; text-align: center;">
+            <p>Don't have an account? <a [routerLink]="['/guest/signup']" style="color: rgb(131, 21, 221); font-weight: bold;">Create an Account</a></p>
+        </div>
+    </div>
+</form>
+

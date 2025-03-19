@@ -1,0 +1,28 @@
+<nav class="navbar">
+    <a class="navbar-brand" [routerLink]="['/user/userhome']"><b>ZoonTask Management </b></a>
+    <div>
+         <ul class="navbar-nav" style="margin-left: 185ex; ">
+            <li class="nav-item" >
+                <a class="nav-link" [routerLink]="['/user/userhome']">Home</a>
+            </li>
+            <li class="dropdown">
+                <a [routerLink]="['/user/blog']">Blog</a>
+                <div class="dropdown-content">
+                    <a [routerLink]="['/user/blog']" >Blog </a>
+                    <a [routerLink]="['/user/myblog']">My Blog</a>
+                    <a [routerLink]="['/user/blogreg']">Blog Registration</a>
+                </div>
+            </li>
+            <!-- <li class="nav-item" >
+                <a class="nav-link" [routerLink]="['/user/contact']">Contact</a>
+            </li> -->
+            <li class="nav-item" >
+                <a class="nav-link" (click)="logout()">Logout</a>
+            </li>
+        </ul> 
+    </div>
+</nav>
+<router-outlet></router-outlet>
+<div class="footer">
+    <p><b>ZoonTask Management </b> </p>
+</div>

@@ -1,0 +1,122 @@
+/* src/app/blog-list/blog-list.component.css */
+
+/* Overall styling for the blog list container */
+.blog-list {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header style */
+  .blog-list h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  /* Individual blog item */
+  .blog-item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for each blog item */
+  .blog-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Blog title styling */
+  .blog-item h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 12px;
+    font-weight: bold;
+  }
+  
+  /* Author and date styling */
+  .blog-item p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  /* Excerpt content (first 100 characters) */
+  .blog-item p.excerpt {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+  }
+  
+  /* Read more link */
+  .blog-item a {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for the "Read more" link */
+  .blog-item a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  /* Add responsiveness */
+  @media (max-width: 768px) {
+    .blog-list {
+      padding: 20px;
+    }
+  
+    .blog-item h2 {
+      font-size: 22px;
+    }
+  
+    .blog-item p {
+      font-size: 14px;
+    }
+  
+    .blog-item a {
+      font-size: 14px;
+    }
+  
+    .blog-list h1 {
+      font-size: 28px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .blog-list {
+      padding: 15px;
+    }
+  
+    .blog-item {
+      padding: 15px;
+    }
+  
+    .blog-item h2 {
+      font-size: 20px;
+    }
+  
+    .blog-item p {
+      font-size: 12px;
+    }
+  
+    .blog-item a {
+      font-size: 12px;
+    }
+  
+    .blog-list h1 {
+      font-size: 24px;
+    }
+  }
+  
