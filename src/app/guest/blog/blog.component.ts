@@ -26,7 +26,7 @@ export class BlogComponent implements OnInit  {
     }
   
     getAllBlog(page: number): void {
-      this.http.get(`http://127.0.0.1:8000/allblog/?page=${page}&limit=${this.postsPerPage}`).subscribe((resultData: any) => {
+      this.http.get(`http://127.0.0.1:8000/publicallblog/?page=${page}&limit=${this.postsPerPage}`).subscribe((resultData: any) => {
         console.log(resultData);
         if (!resultData.hasError) {
           this.blogArray = resultData.data || [];
